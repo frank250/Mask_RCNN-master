@@ -437,7 +437,7 @@ if __name__ == '__main__':
     print("Logs: ", args.logs)
     print("Auto Download: ", args.download)
 
-    # Configurations
+    # Configurations 配置加载
     if args.command == "train":
         config = CocoConfig()
     else:
@@ -450,7 +450,7 @@ if __name__ == '__main__':
         config = InferenceConfig()
     config.display()
 
-    # Create model
+    # Create model  创建模型
     if args.command == "train":
         model = modellib.MaskRCNN(mode="training", config=config,
                                   model_dir=args.logs)
